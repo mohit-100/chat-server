@@ -39,18 +39,6 @@ app.use("/api/messages", messageRoute); // assuming messageRoute handles message
 
 
 
-const __dirname1 = path.resolve(__dirname, '..'); // Assuming your server file is in the 'server' directory
-
-if (process.env.NODE_ENV === "production") {
-  app.use(express.static(path.join(__dirname1, "client", "build")));
-  app.get('/*', (req, res) => {
-    res.sendFile(path.resolve(__dirname1, 'client', 'build', 'index.html'));
-  });
-} else {
-  app.get('/', (req, res) => {
-    res.send("API is Running Successfully");
-  });
-}
 
 
   //--------------------Deployment----------------- 
