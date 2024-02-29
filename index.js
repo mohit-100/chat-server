@@ -21,10 +21,7 @@ app.use(express.json());
 
 // Import the userRoutes before connecting to MongoDB
 
-mongoose.connect(process.env.MONGO_URL, {
-    useNewUrlParser: true,
-    useUnifiedTopology: true,
-  })
+mongoose.connect(process.env.MONGO_URL)
   .then(() => {
     console.log("DB Connection Successful");
   })
