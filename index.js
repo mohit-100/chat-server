@@ -13,7 +13,7 @@ const app = express();
 require("dotenv").config();
 
 app.use(cors({
-  origin:["https://chat-q0zl0g4tt-mohit-100s-projects.vercel.app"],
+  origin:["https://chat-9rs33qmuu-mohit-100s-projects.vercel.app"],
   methods:["POST","GET"],
   credentials:true
 }));
@@ -44,7 +44,7 @@ app.use("/api/messages", messageRoute); // assuming messageRoute handles message
 );
 const io = socket(server, {
   cors: {
-    origin: "https://chat-q0zl0g4tt-mohit-100s-projects.vercel.app",
+    origin: "https://chat-9rs33qmuu-mohit-100s-projects.vercel.app",
     credentials: true,
   },
 });
