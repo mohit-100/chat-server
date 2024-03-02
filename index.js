@@ -40,7 +40,7 @@ app.use("/api/messages", messageRoute); // assuming messageRoute handles message
 );
 const io = socket(server, {
   cors: {
-     allowedHeaders:["*"]
+     allowedHeaders:["*"],
      origin: "*",
     credentials: true,
   },
