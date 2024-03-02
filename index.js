@@ -40,7 +40,8 @@ app.use("/api/messages", messageRoute); // assuming messageRoute handles message
 );
 const io = socket(server, {
   cors: {
-     origin: ["https://chat-9rs33qmuu-mohit-100s-projects.vercel.app", "https://chat-app-iota-pied.vercel.app"],
+     allowedHeaders:["*"]
+     origin: "*",
     credentials: true,
   },
 });
